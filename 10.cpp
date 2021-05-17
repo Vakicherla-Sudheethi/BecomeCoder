@@ -3,8 +3,8 @@
 using namespace std;
 int main()
 {
-	string first="park";
-	string last="jimin";
+	string first="ram";
+	string last="lakshman";
 	
 	cout<<first+" "+last;
 	return 0;
