@@ -1,0 +1,52 @@
+//methods in vectors
+#include <iostream>
+#include<vector>//needed to be include in order to access vectors in cpp
+using namespace std;
+#include<bits/stdc++.h>
+int main() 
+    {
+    //creat a vector 
+    vector<int>ve;//creates a vector of ve 
+    ve.push_back(10);//pushes 10 elements into the array
+    ve.push_back(20);//pushes 10 and 20 elements into the array
+    //ve.emplace_back(40);//{10,20,40}-emplace is as same as push_back
+    ve.pop_back();// deletes the last value
+    //print the elements in vector
+    for(int i=0;i<ve.size();i++)
+    {
+        cout<<ve[i]<<" ";
+    }
+    vector<int>arr={10,20,30,40,50};//{100,100,100}
+    //vector<int>arr(3,100);//3-length of array and 100 is the value assigned to all values of array
+	//vector<int>arr(5);//has size of 5 and with no values assigned so all values are {0,0,0,0,0}
+    //copy one vector to another
+    vector<int>ve1(ve);//{10,20} - 
+    //copies the elements presnet in ve
+	//printing of the elemnets exists in vector
+	/*iterator-it poits to the address..syntax is vector<int>::iterator it=ve.begin()
+	here; ve.begin() is address of first point of the vector
+	      ve.end() represents the last next address*/
+    vector<int>::iterator it;
+    //cout<< & it<<endl;//this & represents the address 
+    cout<<*(it)<<endl;//*(it)gives the particular address in the vector
+    it++;//incrementation
+    cout<<*(it)<<endl;
+    for(vector<int>::iterator it=arr.begin(); it!=arr.end();it++)
+    {
+        cout<<*(it)<<" ";
+    }
+    //the above function can be modified into auto
+    for(auto it=arr.begin();it!=arr.end();it++)//auto-creates the iterator
+    {
+        cout<<*(it)<<" ";
+    }
+    //it can be furtherly modified into
+    for(auto it:arr)
+    {
+        cout<<it<<" ";
+    }
+    int x=20;
+    it=find(arr.begin(),arr.end(),x);//find-searches all the elements from the begining to ending
+    cout<<*(it);
+	return 0;
+}
